@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement; // จำเป็นต้องมี
+
+public class Button_MainMenu : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public void StartGame() //public
+    {
+        SceneManager.LoadScene("Scene_1"); // LoadScene
+    }
+    public void ExitGame() //public
+    {
+        Application.Quit(); // ExitGame
+        UnityEditor.EditorApplication.isPlaying = false;
+        Debug.Log("Game is exiting...");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
