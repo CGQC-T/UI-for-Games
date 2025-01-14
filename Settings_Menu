@@ -1,0 +1,28 @@
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+
+
+    public class Settings_Menu : MonoBehaviour
+    {
+    public GameObject settingsPanel; // อ้างอิงถึง Panel
+    public AudioSource audioSource; // เชื่อม AudioSource กับสคริปต์
+
+    // ฟังก์ชันเปิด Settings
+    public void OpenSettings()
+    {
+        settingsPanel.SetActive(true);
+    }
+
+    // ฟังก์ชันปิด Settings
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+    }
+
+    // Volume Slider Setting
+    public void SetVolume(float volume)
+    {
+        audioSource.volume = volume;
+    }
+}
